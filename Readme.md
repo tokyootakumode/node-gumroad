@@ -21,7 +21,7 @@ client.authenticate (err) ->
 
 # Methods
 
-##### authenticate(callback)
+#### authenticate(callback)
 
 This method should be called before any other, except of **setEndpoint**. Authenticates user with given email and password, saves token for future API calls.
 
@@ -29,7 +29,7 @@ Params:
 
 - callback - optional callback, which will be called with the result of authentication.
 
-##### setEndpoint(endpoint)
+#### setEndpoint(endpoint)
 
 Allows to set endpoint for API calls, in case it changes. Default one(https://gumroad.com/api) is already set up.
 
@@ -37,7 +37,7 @@ Params:
 
 - endpoint - endpoint for the API, in case it changes(default one is already there).
 
-##### newLink(link, callback)
+#### newLink(link, callback)
 
 Creates new link, using given options.
 
@@ -62,7 +62,7 @@ callback = (err, result) ->
 	# don't forget to check err
 ```
 
-##### getLink(id, callback)
+#### getLink(id, callback)
 
 Gets info about the link with given id.
 
@@ -71,7 +71,7 @@ Params:
 - id - unique id of the link.
 - callback - optional callback.
 
-##### editLink(link, callback)
+#### editLink(link, callback)
 
 Edits link. Requires **id** field to be present in **link** object.
 
@@ -80,7 +80,7 @@ Params:
 - link - object of the link. **id** field should be there.
 - callback - optional callback.
 
-##### deleteLink(id, callback)
+#### deleteLink(id, callback)
 
 Deletes link.
 
@@ -89,7 +89,7 @@ Params:
 - id - unique id of the link.
 - callback - optional callback.
 
-##### getLinks(callback)
+#### getLinks(callback)
 
 Gets the list of all links.
 
