@@ -1,7 +1,7 @@
 
 # Gumroad
 
-Gumroad is(obviously) wrapper for Gumroad's API. Wrapper covered 100% of its methods.
+Gumroad is(obviously) client for Gumroad's API. Library covered 100% of its methods.
 
 # Installation
 
