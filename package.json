@@ -1,0 +1,11 @@
+{
+    "name": "gumroad"
+  , "version": "0.9.0"
+  , "description": "API wrapper for Gumroad."
+  , "keywords": ["gumroad"]
+  , "author": "Vadim Demedes <sbioko@gmail.com>"
+  , "dependencies": { "request" : "*" }
+  , "main": "index"
+  , "engines": { "node": ">=0.4" }
+  , "repository": { "type": "git", "url": "https://github.com/vdemedes/node-gumroad.git" }
+}
