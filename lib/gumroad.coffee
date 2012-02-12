@@ -39,7 +39,9 @@ class Gumroad
 				'link[name]': link.name
 				'link[url]': link.url
 				'link[price_cents]': parseFloat(link.price) * 100
+				'link[price]': parseFloat(link.price) * 100
 				'link[description]': link.description
+				'link[currency]': link.currency
 			, (err, res, body) ->
 				err = not not err
 				if not err
@@ -64,7 +66,7 @@ class Gumroad
 			err = not not err
 			if not err
 				response = JSON.parse body
-				if response.success or response.links # Bug request sent to Gumroad, no success field in response
+				if response.success
 					result = response.links
 					err = no
 				else
@@ -85,7 +87,7 @@ class Gumroad
 			err = not not err
 			if not err
 				response = JSON.parse body
-				if response.success or response.link
+				if response.success
 					result = response.link
 					err = no
 				else
@@ -105,8 +107,9 @@ class Gumroad
 			form:
 				'link[name]': link.name
 				'link[url]': link.url
-				'link[price_cents]': parseFloat(link.price) * 100
+				'link[price]': parseFloat(link.price) * 100
 				'link[description]': link.description
+				'link[currency]': link.currency
 			, (err, res, body) ->
 				err = not not err
 				if not err

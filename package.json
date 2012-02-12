@@ -1,6 +1,6 @@
 {
     "name": "gumroad"
-  , "version": "0.9.1"
+  , "version": "0.9.2"
   , "description": "API client for Gumroad."
   , "keywords": ["gumroad"]
   , "author": "Vadim Demedes <sbioko@gmail.com>"
