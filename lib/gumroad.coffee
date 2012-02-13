@@ -100,7 +100,7 @@ class Gumroad
 		throw new Error 'You should authenticate before querying Gumroad\'s API' if not @token
 		that = @
 		request
-			method: 'POST'
+			method: 'PUT'
 			uri: @endpoint + '/links/' + link.id
 			headers:
 				Authorization: 'Basic ' + @token
@@ -126,8 +126,8 @@ class Gumroad
 	deleteLink: (id, callback) ->
 		throw new Error 'You should authenticate before querying Gumroad\'s API' if not @token
 		request
-			method: 'POST'
-			uri: @endpoint + '/links/' + link.id
+			method: 'DELETE'
+			uri: @endpoint + '/links/' + id
 			headers:
 				Authorization: 'Basic ' + @token
 			, (err, res, body) ->
