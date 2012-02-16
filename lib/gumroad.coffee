@@ -36,12 +36,12 @@ class Gumroad
 			headers:
 				Authorization: 'Basic ' + @token
 			form:
-				'link[name]': link.name
-				'link[url]': link.url
-				'link[price_cents]': parseFloat(link.price) * 100
-				'link[price]': parseFloat(link.price) * 100
-				'link[description]': link.description
-				'link[currency]': link.currency
+				name: link.name
+				url: link.url
+				price_cents: parseFloat(link.price) * 100
+				price: parseFloat(link.price) * 100
+				description: link.description
+				currency: link.currency
 			, (err, res, body) ->
 				err = not not err
 				if not err
@@ -105,11 +105,12 @@ class Gumroad
 			headers:
 				Authorization: 'Basic ' + @token
 			form:
-				'link[name]': link.name
-				'link[url]': link.url
-				'link[price]': parseFloat(link.price) * 100
-				'link[description]': link.description
-				'link[currency]': link.currency
+				name: link.name
+				url: link.url
+				price: parseFloat(link.price) * 100
+				price_cents: parseFloat(link.price) * 100
+				description: link.description
+				currency: link.currency
 			, (err, res, body) ->
 				err = not not err
 				if not err
