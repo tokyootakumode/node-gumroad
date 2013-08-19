@@ -32,7 +32,7 @@ class Gumroad
 		that = @
 		request
 			method: 'POST'
-			uri: @endpoint + '/links'
+			uri: @endpoint + '/products'
 			headers:
 				Authorization: 'Basic ' + @token
 			form:
@@ -59,7 +59,7 @@ class Gumroad
 		throw new Error 'You should authenticate before querying Gumroad\'s API' if not @token
 		request
 			method: 'GET'
-			uri: @endpoint + '/links'
+			uri: @endpoint + '/products'
 			headers:
 				Authorization: 'Basic ' + @token
 		, (err, res, body) ->
@@ -80,7 +80,7 @@ class Gumroad
 		that = @
 		request
 			method: 'GET'
-			uri: @endpoint + '/links/' + id
+			uri: @endpoint + '/products/' + id
 			headers:
 				Authorization: 'Basic ' + @token
 		, (err, res, body) ->
@@ -101,7 +101,7 @@ class Gumroad
 		that = @
 		request
 			method: 'PUT'
-			uri: @endpoint + '/links/' + link.id
+			uri: @endpoint + '/products/' + link.id
 			headers:
 				Authorization: 'Basic ' + @token
 			form:
@@ -128,7 +128,7 @@ class Gumroad
 		throw new Error 'You should authenticate before querying Gumroad\'s API' if not @token
 		request
 			method: 'DELETE'
-			uri: @endpoint + '/links/' + id
+			uri: @endpoint + '/products/' + id
 			headers:
 				Authorization: 'Basic ' + @token
 			, (err, res, body) ->
